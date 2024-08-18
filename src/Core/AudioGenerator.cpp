@@ -1,4 +1,4 @@
-#include "AudioEngine/AudioGenerator.hpp"
+#include "Core/AudioGenerator.hpp"
 
 namespace sc
 {

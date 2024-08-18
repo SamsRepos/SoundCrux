@@ -1,8 +1,8 @@
 #pragma once
 
-#include "AudioEngine/AudioGenerator.hpp"
+#include "Core/AudioGenerator.hpp"
 
-#include "AudioEngine/StereoSample.hpp"
+#include "Core/StereoSample.hpp"
 
 
 namespace sc 

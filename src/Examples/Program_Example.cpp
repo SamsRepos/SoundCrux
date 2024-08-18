@@ -13,9 +13,9 @@ void Program_Example()
 {
     std::shared_ptr<SineOsc_Example> generator = std::make_shared<SineOsc_Example>();
 
-    AudioEngine::InitInstance(generator);
+    AudioEngine_Config config = AudioEngine_Config(generator);
 
-    //const AudioEngine& audioEngine = AudioEngine::GetInstance();
+    AudioEngine::InitAndStart(config);
 
     std::cout << "Playing sine wave now" << std::endl;
     std::cout << "Press Enter to stop the program..." << std::endl;

@@ -1,5 +1,7 @@
 #pragma once
 
-#include "AudioEngine/AudioEngine.hpp"
-#include "AudioEngine/AudioGenerator.hpp"
-#include "AudioEngine/StereoSample.hpp"
+#include "Core/Config/AudioEngine_Config.hpp"
+#include "Core/AudioEngine.hpp"
+#include "Core/AudioGenerator.hpp"
+#include "Core/Sample.hpp"
+#include "Core/StereoSample.hpp"

@@ -1,9 +1,9 @@
 #pragma once
 
+#include "Core/Sample.hpp"
+
 namespace sc 
 {
-
-typedef double Sample;
 
 struct StereoSample
 {

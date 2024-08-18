@@ -24,7 +24,7 @@ StereoSample SineOsc_Example::GetNextSample()
     static double phase = 0.0;
     const double increment = 2.0 * PI * m_frequency / m_sampleRate;
 
-    Sample sample = m_amplitude * sin(phase);
+    Sample sample = Sample(m_amplitude * sin(phase));
 
     phase += increment;
     if (phase >= 2.0 * PI) phase -= 2.0 * PI;

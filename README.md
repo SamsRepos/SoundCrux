@@ -1,1 +1,1 @@
-A simple interface to RtAudio 
+A simple interface to OpenAL 
