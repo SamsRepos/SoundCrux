@@ -7,9 +7,6 @@ build/
 # Ignore vcpkg installed packages directory
 vcpkg_installed/
 
-# Ignore generated CMake files
-CMakeFiles/
-
 # Ignore any other temporary files or directories
 *.tmp
 *.log
