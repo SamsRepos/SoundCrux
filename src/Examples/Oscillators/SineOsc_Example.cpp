@@ -10,11 +10,10 @@ const double PI = 3.14159265358979323846;
 SineOsc_Example::SineOsc_Example(
     double frequency,
     double amplitude,
-    unsigned int sampleRate,
-    unsigned int bufferSize
+    unsigned int sampleRate
 )
 :
-Oscillator_Example(frequency, amplitude, sampleRate, bufferSize)
+Oscillator_Example(frequency, amplitude, sampleRate)
 {
 
 }

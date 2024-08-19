@@ -6,11 +6,10 @@ namespace sc
 Oscillator_Example::Oscillator_Example(
     double frequency,
     double amplitude,
-    unsigned int sampleRate,
-    unsigned int bufferSize
+    unsigned int sampleRate
 )
 :
-AudioGenerator(sampleRate, bufferSize),
+AudioGenerator(sampleRate),
 m_frequency(frequency),
 m_amplitude(amplitude)
 {

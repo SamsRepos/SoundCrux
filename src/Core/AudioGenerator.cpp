@@ -3,12 +3,10 @@
 namespace sc
 {
     AudioGenerator::AudioGenerator(
-        unsigned int sampleRate,
-        unsigned int bufferSize
+        unsigned int sampleRate
     )
     :
-    m_sampleRate(sampleRate),
-    m_bufferSize(bufferSize)
+    m_sampleRate(sampleRate)
     {
 
     }

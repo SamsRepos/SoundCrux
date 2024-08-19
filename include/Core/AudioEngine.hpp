@@ -44,7 +44,7 @@ private:
 
     static void CheckOpenALError(const std::string& operation);
 
-    AudioEngine_Config m_config;
+    const AudioEngine_Config m_config;
 
     bool m_running;
 

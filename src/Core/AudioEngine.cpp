@@ -144,9 +144,9 @@ void AudioEngine::AudioProcessingLoop()
 
 void AudioEngine::FillBuffer(ALuint buffer)
 {
-    std::vector<int16_t> audioBuffer(m_generator->m_bufferSize * NUM_CHANNELS);
+    std::vector<int16_t> audioBuffer(m_config.bufferSize * NUM_CHANNELS);
 
-    for(unsigned int i = 0; i < m_generator->m_bufferSize; i++) 
+    for(unsigned int i = 0; i < m_config.bufferSize; i++) 
     {
         StereoSample stereoSample = m_generator->GetNextSample();
         
