@@ -25,14 +25,14 @@ namespace
     }
 }
 
-void AudioEngine::InitAndStart(AudioEngine_Config config)
+void AudioEngine::InitAndStart(AudioEngine_Config config, std::shared_ptr<AudioGenerator> generator)
 {
     if(m_instance)
     {
         throw std::runtime_error("AudioEngine instance already exists");
     }
 
-    m_instance.reset(new AudioEngine(config));
+    m_instance.reset(new AudioEngine(config, generator));
 }
 
 void AudioEngine::StopAndCloseStream()
@@ -45,13 +45,13 @@ void AudioEngine::StopAndCloseStream()
     m_instance.reset();
 }
 
-AudioEngine::AudioEngine(AudioEngine_Config config)
+AudioEngine::AudioEngine(AudioEngine_Config config, std::shared_ptr<AudioGenerator> generator)
 :
 m_config(config),
+m_generator(generator),
 m_running(false),
 m_device(nullptr),
-m_context(nullptr),
-m_generator(config.generator)
+m_context(nullptr)
 {
     if(m_running)
     {

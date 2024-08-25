@@ -5,10 +5,4 @@
 namespace sc
 {
 
-AudioEngine_Config::AudioEngine_Config(std::shared_ptr<AudioGenerator> generator)
-:
-generator(generator)
-{   
-}
-
 }

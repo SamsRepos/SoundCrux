@@ -28,7 +28,7 @@ public:
     AudioEngine(const AudioEngine&) = delete;
     AudioEngine& operator=(const AudioEngine&) = delete;
 
-    static void InitAndStart(AudioEngine_Config config);
+    static void InitAndStart(AudioEngine_Config config, std::shared_ptr<AudioGenerator> generator);
     static void StopAndCloseStream();
 
 protected:
@@ -37,7 +37,7 @@ protected:
 
 private:
     inline static std::unique_ptr<AudioEngine> m_instance = nullptr;
-    AudioEngine(AudioEngine_Config config);
+    AudioEngine(AudioEngine_Config config, std::shared_ptr<AudioGenerator> generator);
 
     void AudioProcessingLoop();
     void FillBuffer(ALuint buffer);
