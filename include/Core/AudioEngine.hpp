@@ -20,7 +20,7 @@ const int NUM_BUFFERS  = 2;
 //struct AudioEngine_Config;
 
 class AudioGenerator;
-class StereoSample;
+struct StereoSample;
 
 class AudioEngine
 {

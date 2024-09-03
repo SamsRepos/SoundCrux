@@ -159,7 +159,14 @@ void AudioEngine::FillBuffer(ALuint buffer)
         audioBuffer[i * 2 + 1] = stereoSample.right.value;
     }
 
-    alBufferData(buffer, AL_FORMAT_STEREO16, audioBuffer.data(), audioBuffer.size() * sizeof(int16_t), m_generator->m_sampleRate);
+    alBufferData(
+        buffer, 
+        AL_FORMAT_STEREO16, 
+        audioBuffer.data(), 
+        static_cast<ALsizei>(audioBuffer.size() * sizeof(int16_t)),
+        m_generator->m_sampleRate
+    );
+
     CheckOpenALError("Buffer Data");
 }
 

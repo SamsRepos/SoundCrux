@@ -18,7 +18,7 @@ StereoSample SawtoothOsc_Example::GetNextSample()
 {
     static Sample sample = Sample(m_amplitude);
 
-    sample -= (2 * Sample(m_amplitude)) / (m_sampleRate / m_frequency);
+    sample -= Sample( (2 * m_amplitude) / (m_sampleRate / m_frequency) );
 
     if(sample <= Sample(-m_amplitude)) 
     {
