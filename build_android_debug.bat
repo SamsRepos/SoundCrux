@@ -7,7 +7,7 @@ REM Create and navigate to the build directory
 mkdir build
 pushd build
 
-REM Path to the Android NDK (adjust this if necessary)
+REM Path to the Android NDK
 set ANDROID_NDK=C:/android-ndk-r27
 
 REM Android ABI and platform settings
