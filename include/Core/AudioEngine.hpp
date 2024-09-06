@@ -46,6 +46,8 @@ private:
 
     const AudioEngine_Config m_config;
 
+    std::shared_ptr<AudioGenerator> m_generator;
+
     bool m_running;
 
     ALCdevice* m_device;
@@ -54,8 +56,6 @@ private:
     ALuint m_buffers[NUM_BUFFERS];
 
     std::thread m_audioThread;
-
-    std::shared_ptr<AudioGenerator> m_generator;
 
     std::vector<StereoSample> m_debugSamples;
 };

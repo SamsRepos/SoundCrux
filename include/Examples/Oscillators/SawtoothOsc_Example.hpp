@@ -14,6 +14,8 @@ public:
         unsigned int sampleRate = DEFAULT_SAMPLE_RATE
     );
 
+    virtual ~SawtoothOsc_Example() = default;
+    
 protected:
     virtual StereoSample GetNextSample();
 
